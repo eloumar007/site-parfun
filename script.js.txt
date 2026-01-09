@@ -1,0 +1,18 @@
+let panier = [];
+function ajouterAuPanier(nom, prix) {
+  panier.push({ nom, prix });
+  afficherPanier();
+}
+function afficherPanier() {
+  const liste = document.getElementById("liste-panier");
+  const total = document.getElementById("total");
+  liste.innerHTML = "";
+  let somme = 0;
+  panier.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = `${item.nom} - ${item.prix} €`;
+    liste.appendChild(li);
+    somme += item.prix;
+  });
+  total.textContent = somme.toFixed(2);
+}
