@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parfums Élégance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Parfums Élégance</h1>
+    <nav>
+      <a href="#produits">Produits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Découvrez l'élégance en flacon</h2>
+      <p>Parfums raffinés pour femmes et hommes</p>
+    </section>
+
+    <section id="produits" class="produits">
+      <h2>Nos parfums</h2>
+      <div class="produit" onclick="ajouterAuPanier('Élixir Intense', 89)">
+        <img src="parfum1.jpg" alt="Élixir Intense"/>
+        <h3>Élixir Intense</h3>
+        <p>89 €</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <div class="produit" onclick="ajouterAuPanier('Fleur d’Ambre', 75)">
+        <img src="parfum2.jpg" alt="Fleur d’Ambre"/>
+        <h3>Fleur d’Ambre</h3>
+        <p>75 €</p>
+        <button>Ajouter au panier</button>
+      </div>
+      <!-- Ajoute plus de produits ici -->
+    </section>
+
+    <section class="panier">
+      <h2>Panier</h2>
+      <ul id="liste-panier"></ul>
+      <p>Total : <span id="total">0</span> €</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email : contact@parfumselegance.fr</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Parfums Élégance</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
